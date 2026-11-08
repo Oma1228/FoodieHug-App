@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FoodieHug 🍓 | Share Food, Share Love</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <a href="#home" class="logo">🍓 FoodieHug</a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#food">Find Food</a>
+            <a href="#donate">Donate</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <button class="nav-btn" id="loginBtn">Login</button>
+
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <span class="tag">
+                    💗 A little kindness goes a long way
+                </span>
+
+                <h1>
+                    Good Food.<br>
+                    <span>More Love.</span>
+                </h1>
+
+                <p>
+                    Share your extra food with someone who needs it.
+                    Together, let's make food waste a thing of the past.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#food" class="primary-btn">
+                        Find Free Food 🍓
+                    </a>
+
+                    <a href="#donate" class="secondary-btn">
+                        Donate Food ❤️
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Food Image -->
+            <div class="hero-art">
+
+                <img
+                    src="https://img.magnific.com/free-vector/pink-sweet-food-seamless-pattern_1308-132714.jpg?semt=ais_hybrid&w=740&q=80"
+                    alt="Delicious Food"
+                    class="hero-image"
+                >
+
+                <span class="floating f1">🍓</span>
+                <span class="floating f2">💗</span>
+                <span class="floating f3">🥑</span>
+
+            </div>
+
+        </section>
+
+        <!-- Impact Section -->
+        <section class="impact">
+
+            <div>
+                <span>🌱</span>
+                <h3>Save Food</h3>
+                <p>Reduce food waste</p>
+            </div>
+
+            <div>
+                <span>🤝</span>
+                <h3>Help People</h3>
+                <p>Support communities</p>
+            </div>
+
+            <div>
+                <span>💗</span>
+                <h3>Spread Love</h3>
+                <p>Share with kindness</p>
+            </div>
+
+        </section>
+
+        <!-- Find Food -->
+        <section class="food-section" id="food">
+
+            <div class="section-heading">
+
+                <span class="tag">🍱 Free food donations</span>
+
+                <h2>Food Near You</h2>
+
+                <p>Discover food shared by kind people.</p>
+
+            </div>
+
+            <div class="search-area">
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search food or location..."
+                >
+
+                <select id="categoryFilter">
+                    <option value="all">All Food</option>
+                    <option value="meals">Meals</option>
+                    <option value="bakery">Bakery</option>
+                    <option value="vegetables">Vegetables</option>
+                    <option value="fruits">Fruits</option>
+                </select>
+
+            </div>
+
+            <div id="foodList" class="food-grid"></div>
+
+            <p id="emptyMessage" class="empty-message" hidden>
+                No food found. Try another search. 🍓
+            </p>
+
+        </section>
+
+        <!-- Donation Section -->
+        <section class="donate-section" id="donate">
+
+            <div class="section-heading">
+
+                <span class="tag">💝 Be someone's hero</span>
+
+                <h2>Share Your Food</h2>
+
+                <p>Have extra food? Help someone today.</p>
+
+            </div>
+
+            <form id="donationForm" class="donation-form">
+
+                <label for="foodName">Food Name</label>
+                <input id="foodName" type="text"
+                    placeholder="Example: Rice and Curry" required>
+
+                <label for="donorName">Donor Name</label>
+                <input id="donorName" type="text"
+                    placeholder="Your name or restaurant" required>
+
+                <label for="foodLocation">Pickup Location</label>
+                <input id="foodLocation" type="text"
+                    placeholder="Example: Negombo" required>
+
+                <label for="foodQuantity">Quantity</label>
+                <input id="foodQuantity" type="text"
+                    placeholder="Example: 5 portions" required>
+
+                <label for="foodCategory">Food Category</label>
+                <select id="foodCategory" required>
+                    <option value="meals">Meals</option>
+                    <option value="bakery">Bakery</option>
+                    <option value="vegetables">Vegetables</option>
+                    <option value="fruits">Fruits</option>
+                </select>
+
+                <label for="expiryTime">Collect Before</label>
+                <input id="expiryTime" type="datetime-local" required>
+
+                <label class="check-label">
+                    <input type="checkbox" id="safetyCheck" required>
+                    I confirm that this food is safe to donate and properly stored.
+                </label>
+
+                <button type="submit" class="primary-btn full-btn">
+                    Share Food ❤️
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- About -->
+        <section class="about-section" id="about">
+
+            <h2>Small Acts. Big Love. 🌍</h2>
+
+            <p>
+                Every meal shared makes a difference.
+                Join FoodieHug and help create a world where
+                good food reaches people instead of going to waste.
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <h2>🍓 FoodieHug</h2>
+
+        <p>Share Food. Share Love.</p>
+        <p>Made with ❤️ for a better world.</p>
+
+        <small>© 2026 FoodieHug. All rights reserved.</small>
+
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="modal" class="modal" hidden>
+
+        <div class="modal-box">
+
+            <button id="closeModal" class="close-btn">✕</button>
+
+            <div id="modalContent"></div>
+
+        </div>
+
+    </div>
+
+    <!-- Toast -->
+    <div id="toast" class="toast" role="status"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

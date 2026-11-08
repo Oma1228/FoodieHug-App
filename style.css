@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --pink: #e96b91;
+    --pink-light: #fff0f4;
+    --green: #287b50;
+    --dark: #081830;
+    --muted: #78877e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    color: white;
+
+    background:
+        linear-gradient(rgba(8,24,52,0.78), rgba(10,30,65,0.85)),
+        url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnV6SvO4nHD_qeMQg9yT6CDN_TkwpcOfK2XyGoxxcGQQ&s=10");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+button, input, select {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 7%;
+    background: rgba(8,23,48,0.96);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+    color: var(--pink);
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    font-size: 14px;
+    color: white;
+    transition: color .2s;
+}
+
+nav a:hover {
+    color: var(--pink);
+}
+
+.nav-btn {
+    background: var(--green);
+    color: white;
+    border: 0;
+    padding: 10px 22px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* Buttons */
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 30px;
+    border: 0;
+    cursor: pointer;
+    font-weight: 600;
+    text-align: center;
+    transition: transform .2s, background .2s;
+}
+
+.primary-btn {
+    background: var(--pink);
+    color: white;
+}
+
+.secondary-btn {
+    background: white;
+    color: #173d65;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+    transform: translateY(-3px);
+}
+
+.full-btn {
+    width: 100%;
+}
+
+/* Hero */
+
+.hero {
+    min-height: 470px;
+    padding: 65px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(9,26,55,0.65),
+            rgba(20,47,83,0.70)
+        ),
+        url("https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=1600&q=85");
+
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.tag {
+    display: inline-block;
+    background: white;
+    color: var(--pink);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 70px);
+    line-height: 1.15;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #ff8eae;
+}
+
+.hero p {
+    color: #e0e8f4;
+    line-height: 1.9;
+    max-width: 470px;
+    margin-bottom: 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Hero Image */
+
+.hero-art {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin: 25px;
+    flex-shrink: 0;
+    border: 6px solid rgba(255,255,255,0.8);
+    box-shadow: 0 10px 35px #00000050;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
+}
+
+.floating {
+    position: absolute;
+    font-size: 35px;
+}
+
+.f1 {
+    top: 10px;
+    right: 15px;
+}
+
+.f2 {
+    bottom: 20px;
+    left: 5px;
+}
+
+.f3 {
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Impact */
+
+.impact {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 40px 8%;
+    text-align: center;
+    background: rgba(8,25,52,0.88);
+}
+
+.impact span {
+    font-size: 35px;
+}
+
+.impact h3 {
+    margin: 8px 0;
+    color: #ff9bb8;
+}
+
+.impact p {
+    font-size: 13px;
+    color: #d5dfef;
+}
+
+/* Food Section */
+
+.food-section,
+.donate-section {
+    padding: 70px 8%;
+}
+
+.food-section {
+    background: rgba(12,30,60,0.85);
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    margin: 15px 0 8px;
+}
+
+.section-heading p {
+    color: #d5dfef;
+    font-size: 14px;
+}
+
+.search-area {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    display: flex;
+    gap: 12px;
+}
+
+.search-area input,
+.search-area select {
+    background: white;
+    border: 1px solid #dce5f5;
+    padding: 14px;
+    border-radius: 12px;
+    outline: none;
+    min-width: 0;
+    color: #273b50;
+}
+
+.search-area input {
+    flex: 1;
+}
+
+/* Food Cards */
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.food-card {
+    background: rgba(255,255,255,0.97);
+    color: #273b50;
+    border-radius: 18px;
+    padding: 23px;
+    border: 1px solid #f1e6e9;
+    box-shadow: 0 5px 20px #00000020;
+    transition: transform .2s;
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+}
+
+.food-emoji {
+    width: 65px;
+    height: 65px;
+    border-radius: 15px;
+    background: var(--pink-light);
+    display: grid;
+    place-items: center;
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.food-card h3 {
+    color: var(--green);
+    margin-bottom: 12px;
+}
+
+.food-card p {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 8px 0;
+}
+
+.food-status {
+    color: var(--green) !important;
+    font-weight: 600;
+}
+
+.reserve-btn {
+    margin-top: 15px;
+    width: 100%;
+    background: var(--green);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.reserve-btn:disabled {
+    background: #9aaba0;
+    cursor: not-allowed;
+}
+
+.empty-message {
+    text-align: center;
+    padding: 30px;
+}
+
+/* Donation */
+
+.donate-section {
+    background: rgba(15,35,70,0.92);
+}
+
+.donation-form {
+    max-width: 520px;
+    margin: auto;
+    background: white;
+    color: #273b50;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px #00000025;
+}
+
+.donation-form label {
+    display: block;
+    margin: 15px 0 7px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.donation-form input:not([type="checkbox"]),
+.donation-form select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #eadfe2;
+    border-radius: 10px;
+    outline: none;
+    color: #273b50;
+}
+
+.check-label {
+    display: flex !important;
+    align-items: flex-start;
+    gap: 10px;
+    font-weight: 400 !important;
+    line-height: 1.6;
+    margin: 20px 0 !important;
+}
+
+.check-label input {
+    margin-top: 5px;
+}
+
+.donation-form button {
+    margin-top: 10px;
+}
+
+/* About */
+
+.about-section {
+    padding: 65px 10%;
+    text-align: center;
+    background: rgba(9,28,57,0.90);
+}
+
+.about-section h2 {
+    color: #ff9bb8;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.about-section p {
+    max-width: 650px;
+    margin: auto;
+    color: #d5dfef;
+    line-height: 1.9;
+}
+
+/* Footer */
+
+footer {
+    background: #08172f;
+    color: white;
+    text-align: center;
+    padding: 40px 15px;
+}
+
+footer h2 {
+    color: #ffb6cb;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 8px;
+    color: #e2eee5;
+    font-size: 13px;
+}
+
+footer small {
+    display: block;
+    margin-top: 20px;
+    color: #b9d1bf;
+}
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: #0008;
+    z-index: 30;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+}
+
+.modal[hidden] {
+    display: none;
+}
+
+.modal-box {
+    position: relative;
+    background: white;
+    color: #273b50;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    padding: 35px 25px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    border: 0;
+    background: transparent;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.modal-box h2 {
+    color: var(--pink);
+    margin-bottom: 12px;
+}
+
+/* Toast */
+
+.toast {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #234c37;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 12px;
+    z-index: 50;
+    display: none;
+    max-width: 90%;
+    text-align: center;
+}
+
+.toast.show {
+    display: block;
+}
+
+/* Responsive */
+
+@media (max-width: 750px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 15px 5%;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 45px 7%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-art {
+        width: 210px;
+        height: 210px;
+        margin: 40px 0 10px;
+    }
+
+    .impact {
+        padding: 30px 4%;
+        gap: 8px;
+    }
+
+    .impact h3 {
+        font-size: 13px;
+    }
+
+    .impact p {
+        font-size: 11px;
+    }
+
+    .food-section,
+    .donate-section {
+        padding: 50px 5%;
+    }
+
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-area {
+        flex-direction: column;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    body {
+        background-attachment: scroll;
+    }
+}
+
+@media (min-width: 751px) and (max-width: 1000px) {
+
+    .food-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
